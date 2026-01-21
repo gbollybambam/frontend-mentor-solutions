@@ -1,0 +1,219 @@
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800: hsl(14, 45%, 36%);
+    --color-rose-800: hsl(332, 51%, 32%);
+    --color-rose-50: hsl(330, 100%, 98%);
+
+    --font-family-heading: "Young Serif", serif;
+    --font-family-body: "Outfit", sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: var(--color-white);
+
+    font-family: var(--font-family-body);
+    font-size: 16px ;
+    color: var(--color-stone-600);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-stone-900);
+}
+
+h2 {
+    color: var(--color-brown-800);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-stone-150);
+    margin: 1.5rem 0;
+}
+
+/* LAYOUT & COMPONENT STYLES (Mobile-First) */
+.recipe-content {
+    padding: 2rem;
+}
+
+.recipe-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.recipe-title + p {
+    margin-bottom: 1.5rem;
+}
+
+.prep-time {
+    background-color: var(--color-rose-50);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.prep-time h3 {
+    color: var(--color-rose-800);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semi-bold);
+    font-family: var(--font-family-body);
+    margin-bottom: 0.75rem;
+}
+
+.prep-time ul {
+    /* list-style-type: none; */
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.prep-time ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+.prep-time ul li:last-child {
+    margin-bottom: 0;
+}
+
+.prep-time ul li::marker {
+    color: var(--color-rose-800);
+    font-weight: var(--font-weight-bold);
+}
+
+.prep-time ul li strong {
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+    margin-bottom: 1rem;
+}
+
+.ingredients ul,
+.instructions ol {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.ingredients ul li,
+.instructions ol li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+.ingredients ul li:last-child,
+.instructions ol li:last-child {
+    margin-bottom: 0;
+}
+
+.instructions ol li strong{
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.ingredients ul li::marker,
+.instructions ol li::marker {
+    color: var(--color-rose-800);
+    font-weight: var(--font-weight-bold);
+}
+
+.nutrition p {
+    margin-bottom: 1rem;
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition table th,
+.nutrition table td {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: var(--font-weight-regular);
+}
+
+.nutrition table td {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brown-800);
+}
+
+.nutrition table tr {
+    border-bottom: 1px solid var(--color-stone-150);
+}
+
+.nutrition table tr:last-child{
+    border-bottom: none;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  padding: 2rem;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--color-stone-100);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+
+    .recipe-card {
+        background-color: var(--color-white);
+        border-radius: 1.5rem;
+        max-width: 736px;
+        padding: 2.5rem;
+    }
+
+    .recipe-image-container img {
+        border-radius: 1rem;
+    }
+
+    .recipe-content {
+        padding: 0;
+    }
+
+    .recipe-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .attribution {
+        padding: 2rem 0;
+    }
+}

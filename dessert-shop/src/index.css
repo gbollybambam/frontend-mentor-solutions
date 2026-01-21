@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+    --font-body: "Red Hat Text", sans-serif;
+
+    --color-red: hsl(14 86% 42%);
+    --color-green: hsl(159 69% 38%);
+    --color-rose-50: hsl(20 50% 98%);
+    --color-rose-100: hsl(13 31% 94%);
+    --color-rose-300: hsl(14 25% 72%);
+    --color-rose-400: hsl(7 20% 60%);
+    --color-rose-500: hsl(12 20% 44%);
+    --color-rose-900: hsl(14 65% 9%);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-rose-50);
+}
+
+
+@layer base {
+
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-rose-300);
+        border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-rose-500);
+    }
+
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-rose-300) transparent;
+    }
+}

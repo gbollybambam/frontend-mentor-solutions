@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-cyan: hsl(180, 62%, 55%);
+      --color-red: hsl(0, 78%, 62%);
+      --color-orange: hsl(34, 97%, 64%);
+      --color-blue: hsl(212, 86%, 64%); 
+
+      --color-dark-blue: hsl(234, 12%, 34%);
+      --color-grayish-blue: hsl(212, 6%, 44%);
+
+      --font-sans: "Poppins", sans-serif;
+    }
+
+    @layer base {
+      html {
+        font-size: 15px;
+      }
+      body {
+        font-family: var(--font-sans);
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+  </style>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center ">
+
+  <main class="p-8">
+    <section class="max-w-lg mx-auto mb-16 text-center">
+      <h1 class="mb-4 text-3xl font-semibold text-dark-blue">
+        <span class="font-light text-grayish-blue">Reliable, efficient delivery</span>
+        <br> Powered by Technology
+      </h1>
+
+        <p class="leading-relaxed text-grayish-blue">
+          Our Artificial Intelligence powered tools use millions of project data points
+          to ensure that your project is successful
+        </p>
+    </section>
+  
+    <section class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:items-center lg:max-w-6xl">
+      <article class="p-8 bg-white border-t-4 rounded-lg shadow-xl border-cyan flex flex-col max-w-sm mx-auto">
+        <h2 class="mb-1 text-xl font-semibold text-dark-blue">Supervisor</h2>
+        <p class="mb-8 text-sm text-grayish-blue">Monitors activity to identify project roadblocks</p>
+        <img class="self-end" src="images/icon-supervisor.svg" alt="">
+      </article>
+    
+      <div class="flex flex-col gap-6">
+        <article class="p-8 bg-white border-t-4 rounded-lg shadow-xl border-red flex flex-col max-w-sm mx-auto">
+          <h2 class="mb-1 text-xl font-semibold text-dark-blue">Team Builder</h2>
+          <p class="mb-8 text-sm text-grayish-blue">Scans our talent network to create the optimal team for your project</p>
+          <img src="images/icon-team-builder.svg" alt="" class="self-end" />
+        </article>
+  
+        <article class="p-8 bg-white border-t-4 rounded-lg shadow-xl border-orange flex flex-col max-w-sm mx-auto">
+          <h2 class="mb-1 text-xl font-semibold text-dark-blue">Karma</h2>
+          <p class="mb-8 text-sm text-grayish-blue">Regularly evaluates our talent to ensure quality</p>
+          <img src="images/icon-karma.svg" alt="" class="self-end"/>
+        </article>
+      </div>
+
+      <article class="p-8 bg-white border-t-4 rounded-lg shadow-xl border-blue flex flex-col max-w-sm mx-auto">
+        <h2 class="mb-1 text-xl font-semibold text-dark-blue">Calculator</h2>
+        <p class="mb-8 text-sm text-grayish-blue">Uses data from past projects to provide better delivery estimates</p>
+        <img src="images/icon-calculator.svg" alt="" class="self-end" />
+      </article>
+
+    </section>
+
+  </main>
+  
+  <footer class="pb-8 text-sm text-center text-grayish-blue">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/gbolahan-olanrewaju-672880261/">Gbollybambam</a>.
+    </p>
+  </footer>
+</body>
+</html>

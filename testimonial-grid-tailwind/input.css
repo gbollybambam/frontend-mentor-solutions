@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+    --font-barlow: "Barlow Semi Condensed", sans-serif;
+
+    --color-primary-purple-50: hsl(260, 100%, 95%);
+    --color-primary-purple-300: hsl(264, 82%, 80%);
+    --color-primary-purple-500: hsl(263, 55%, 52%);
+
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-grey-100: hsl(214, 17%, 92%);
+    --color-neutral-grey-200: hsl(0, 0%, 81%);
+    --color-neutral-grey-400: hsl(224, 10%, 45%);
+    --color-neutral-grey-500: hsl(217, 19%, 35%);
+    --color-neutral-dark-blue: hsl(219, 29%, 14%);
+    --color-neutral-black: hsl(0, 0%, 7%);
+
+    --breakpoint-desktop: 1440px;
+}
+
+body {
+    font-family: var(--font-barlow);
+    font-size: 13px;
+    background-color: var(--color-neutral-grey-100);
+}
